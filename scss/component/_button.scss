@@ -1,0 +1,25 @@
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+// button color variants
+@each $variant, $color in $button-variants {
+  .#{$variant} {
+    background-color: $color;
+    cursor: pointer;
+    transition: background-color 300ms ease-out;
+
+    &:hover {
+      background-color: lighten($color, 15%);
+    }
+    &:active {
+      background-color: darken($color, 15%);
+    }
+  }
+}

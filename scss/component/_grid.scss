@@ -1,0 +1,28 @@
+.container {
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+}
+
+[class^="col"] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+// build out theme colors for each col
+@for $n from 1 through 12 {
+  .theme.col-#{$n} {
+    background-color: #{nth($theme-colors, $n)};
+  }
+}
+
+.card {
+  flex-basis: 100%;
+}
